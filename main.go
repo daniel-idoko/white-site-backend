@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	controller "puppyspot-backend/pkg/controllers"
 
 	"net/http"
