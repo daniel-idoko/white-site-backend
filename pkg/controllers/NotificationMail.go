@@ -1,9 +1,7 @@
 package controller
 
 import (
-	"encoding/json"
 	"fmt"
-	"io"
 	"net/http"
 	"os"
 	"puppyspot-backend/pkg/utils"
@@ -15,7 +13,7 @@ import (
 
 
 
-func HandlePaypalSumbit(w http.ResponseWriter, r *http.Request) {
+func HandleNotification(w http.ResponseWriter, r *http.Request) {
 	utils.EnableCors(w, r)
 	// Parse multipart form
 	err := r.ParseMultipartForm(10 << 20) // 10 MB maximum file size
