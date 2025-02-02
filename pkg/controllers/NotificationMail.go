@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	mail "github.com/go-mail/mail/v2"
+	mail "github.com/go-mail/mail"
 )
 
 func HandleNotification(w http.ResponseWriter, r *http.Request) {
