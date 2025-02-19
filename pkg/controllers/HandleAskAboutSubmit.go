@@ -23,7 +23,7 @@ func HandleAskAboutMail (w http.ResponseWriter, r *http.Request){
     phone := r.FormValue("phone")
     state := r.FormValue("state")
     text := r.FormValue("text")
-    puppyId := r.FormValue("puppyId")
+    puppyID := r.FormValue("puppyID")
 
     var emailAdd = os.Getenv("EMAIL")
 	var emailPassword = os.Getenv("APP_PASSWORD")
@@ -35,7 +35,7 @@ func HandleAskAboutMail (w http.ResponseWriter, r *http.Request){
 	m.SetHeader("To", "info.idoko@gmail.com")
 	m.SetAddressHeader("Cc", emailAdd, "Puppy Spot")
 	m.SetHeader("Subject", "WANT TO KNOW MORE")
-	m.SetBody("text/html", "<h1>Hello White,</h1><br><p>someone wants to know more about this puppy: "+puppyId+" purchase, <strong>Congratulations!!!</strong></p><br><p>details of asker, are as followed</p><br><ul><li>First Name : "+firstName+" </li><li>Last Name: "+lastName+" </li><li>Email: "+emailAddress+" </li><li>phone: "+phone+" </li><li>state: "+state+" </li><li>text: "+text+" </li></ul>")
+	m.SetBody("text/html", "<h1>Hello White,</h1><br><p>someone wants to know more about this puppy: "+puppyID+", <strong>Congratulations!!!</strong></p><br><p>details of asker, are as followed</p><br><ul><li>First Name : "+firstName+" </li><li>Last Name: "+lastName+" </li><li>Email: "+emailAddress+" </li><li>phone: "+phone+" </li><li>state: "+state+" </li><li>text: "+text+" </li></ul>")
 
 	// Send email
 	d := mail.NewDialer(emailHost, 465, emailAdd, emailPassword)
