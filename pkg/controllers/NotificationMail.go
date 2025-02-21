@@ -92,9 +92,9 @@ func HandleUserNotificationEmail(w http.ResponseWriter, r *http.Request){
 		    "<strong>Application Details:</strong><br>" +
 		    "Puppy Name: " + puppyName + "<br>" +
 		    "Breed: " + breed + "<br>" +
-		    "Tracking ID: " + documentID + "<br>" +
+		    "Tracking Code: " + documentID + "<br>" +
 		    "Application Status: <strong>Under Review</strong><br><br>" +
-		    "You can track your application status anytime using your Tracking ID at:<br>" +
+		    "You can track your application status anytime using your Tracking Code at:<br>" +
 		    "<a href='https://puppyspotadoption.shop/shop/puppy-tracker/" + documentID + "'>🔗 Check Status</a><br><br>" +
 		    "We will notify you as soon as your application is approved or if we need any further information. If you have any questions, feel free to reach out.<br><br>" +
 		    "Thanks for choosing us to help you find your new furry friend! 🐶❤️<br><br>" +
