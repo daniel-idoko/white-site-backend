@@ -26,7 +26,9 @@ func main() {
 	router.HandleFunc("/bank-transfer-payment", controller.HandleBankTransferSumbit).Methods("POST", "OPTIONS")
 	router.HandleFunc("/ask-about-mail", controller.HandleAskAboutMail).Methods("POST", "OPTIONS")
 	router.HandleFunc("/notification-email", controller.HandleNotification).Methods("POST", "OPTIONS")
+	router.HandleFunc("/notification-user-email", controller.HandleUserNotificationEmail).Methods("POST", "OPTIONS")
 	
+
 
 	port := os.Getenv("PORT")
 	if port == "" {
