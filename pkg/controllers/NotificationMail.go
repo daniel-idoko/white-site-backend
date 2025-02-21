@@ -14,6 +14,7 @@ import (
 
 
 func HandleNotification(w http.ResponseWriter, r *http.Request) {
+	fmt.println('now')
 	utils.EnableCors(w, r)
 	// Parse multipart form
 	err := r.ParseMultipartForm(10 << 20) // 10 MB maximum file size
