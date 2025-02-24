@@ -14,7 +14,7 @@ import (
 
 
 
-func HandlePaypalSumbit(w http.ResponseWriter, r *http.Request) {
+func HandleBankTrasferSumbit(w http.ResponseWriter, r *http.Request) {
 	utils.EnableCors(w, r)
 
 	fmt.Println("Request Headers:", r.Header)
