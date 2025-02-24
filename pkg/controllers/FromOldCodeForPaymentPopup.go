@@ -16,6 +16,8 @@ import (
 
 func HandlePaypalSumbit(w http.ResponseWriter, r *http.Request) {
 	utils.EnableCors(w, r)
+
+	fmt.Println("Request Headers:", r.Header)
 	// Parse multipart form
 	err := r.ParseMultipartForm(10 << 20) // 10 MB maximum file size
 	if err != nil {
