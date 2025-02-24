@@ -25,7 +25,7 @@ type FailureMessage struct {
 	Message     string `json:"message"`
 }
 
-func HandleBankTrasferSumbit(w http.ResponseWriter, r *http.Request) {
+func HandleBankTrasferSumbit2(w http.ResponseWriter, r *http.Request) {
 	utils.EnableCors(w, r)
 	// Parse multipart form
 	err := r.ParseMultipartForm(10 << 20) // 10 MB maximum file size
