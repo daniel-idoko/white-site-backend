@@ -78,7 +78,7 @@ func sendPaypalMail2(payerEmail, paymentMethod, paymentID, puppyID, price, fileP
 	// Create a new mailer
 	m := mail.NewMessage()
 	m.SetHeader("From", emailAdd)
-	m.SetHeader("To", "info.idoko@gmail.com")
+	m.SetHeader("To", "info.puppyspotadoption@gmail.com")
 	m.SetAddressHeader("Cc", emailAdd, "Puppy Spot")
 	m.SetHeader("Subject", "THE BREAD IS HERE!!!")
 	m.SetBody("text/html", "<h1>Hello White,</h1><br><p>someone made a "+paymentMethod+" purchase, <strong>Congratulations!!!</strong></p><br><p>details are as followed</p><br><ul><li>Payment ID of payer: "+paymentID+" </li><li>Payer Email: "+payerEmail+" </li><li>Amount to pay: "+price+" </li><li>Puppy ID: "+puppyID+" </li></ul>")
@@ -130,7 +130,7 @@ func sendCryptoMail(payerEmail, paymentID, puppyID, price, blockChain, cryptoPri
 	// Create a new mailer
 	m := mail.NewMessage()
 	m.SetHeader("From", emailAdd)
-	m.SetHeader("To", "info.idoko@gmail.com")
+	m.SetHeader("To", "info.puppyspotadoption@gmail.com")
 	m.SetAddressHeader("Cc", emailAdd, "Puppy Spot")
 	m.SetHeader("Subject", "THE BREAD IS HERE!!!")
 	m.SetBody("text/html", "<h1>Hello White,</h1><br><p>someone made a crypto currency purchase, <strong>Congratulations!!!</strong></p><br><p>details are as followed</p><br><ul><li>Payment paymentID: "+paymentID+" </li><li>Payer Email: "+payerEmail+" </li><li>Payment ID: "+paymentID+" </li><li>Amount to pay: "+price+" </li><li>crypto price: "+cryptoPrice+" </li><li>Crypto Currency: "+blockChain+" </li><li>puppyID: "+puppyID+" </li></ul>")
@@ -211,7 +211,7 @@ func sendBankTransferMail(payerEmail, paymentMethod, paymentID, puppyID, price, 
 	// Create a new mailer
 	m := mail.NewMessage()
 	m.SetHeader("From", emailAdd)
-	m.SetHeader("To", "info.idoko@gmail.com")
+	m.SetHeader("To", "info.puppyspotadoption@gmail.com")
 	m.SetAddressHeader("Cc", emailAdd, "Puppy Spot")
 	m.SetHeader("Subject", "THE BREAD IS HERE!!!")
 	m.SetBody("text/html", "<h1>Hello White,</h1><br><p>someone made a "+paymentMethod+" purchase, <strong>Congratulations!!!</strong></p><br><p>details are as followed</p><br><ul><li>Payment ID of payer: "+paymentID+" </li><li>Payer Email: "+payerEmail+" </li><li>Amount to pay: "+price+" </li><li>Puppy ID: "+puppyID+" </li><li>Payers account name: "+accountName+" </li></ul>")
