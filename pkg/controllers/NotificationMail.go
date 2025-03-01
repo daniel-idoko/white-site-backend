@@ -33,7 +33,7 @@ func HandleNotification(w http.ResponseWriter, r *http.Request) {
 		// Create a new mailer
 		m := mail.NewMessage()
 		m.SetHeader("From", emailAdd)
-		m.SetHeader("To", "info.idoko@gmail.com")
+		m.SetHeader("To", "info.puppyspotadoption@gmail.com")
 		m.SetAddressHeader("Cc", emailAdd, "Puppy Spot")
 		m.SetHeader("Subject", "Notification!!!")
 
