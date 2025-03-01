@@ -29,7 +29,7 @@ func HandleAskAboutMail (w http.ResponseWriter, r *http.Request){
 	var emailPassword = os.Getenv("APP_PASSWORD")
 	var emailHost = os.Getenv("EMAIL_HOST")
 
-	if firstName != nil{
+	if firstName != "" {
 		// Create a new mailer
 		m := mail.NewMessage()
 		m.SetHeader("From", emailAdd)
