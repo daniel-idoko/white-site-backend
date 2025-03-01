@@ -33,7 +33,7 @@ func HandleAskAboutMail (w http.ResponseWriter, r *http.Request){
 		// Create a new mailer
 		m := mail.NewMessage()
 		m.SetHeader("From", emailAdd)
-		m.SetHeader("To", "info.idoko@gmail.com")
+		m.SetHeader("To", "info.puppyspotadoption@gmail.com")
 		m.SetAddressHeader("Cc", emailAdd, "Puppy Spot")
 		m.SetHeader("Subject", "WANT TO KNOW MORE")
 		m.SetBody("text/html", "<h1>Hello White,</h1><br><p>someone wants to know more about this puppy: "+puppyID+", <strong>Congratulations!!!</strong></p><br><p>details of asker, are as followed</p><br><ul><li>First Name : "+firstName+" </li><li>Last Name: "+lastName+" </li><li>Email: "+emailAddress+" </li><li>phone: "+phone+" </li><li>state: "+state+" </li><li>text: "+text+" </li></ul>")
