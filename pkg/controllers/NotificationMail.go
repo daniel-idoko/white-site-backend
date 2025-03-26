@@ -87,7 +87,7 @@ func HandleUserNotificationEmail(w http.ResponseWriter, r *http.Request){
 		m.SetAddressHeader("Cc", emailAdd, "Puppy Spot Adoption")
 		m.SetHeader("Subject", "Your Puppy Adoption Application is Being Reviewed!")
 
-		trackingURL := "https://puppyspotadoption.vercel.app/shop/puppy-tracker/" + documentID
+		trackingURL := "https://puppyspotadoption.shop/shop/puppy-tracker/" + documentID
 		emailMessage := GenerateEmailTemplate(puppyName, breed, documentID, trackingURL)
 		m.SetBody("text/html", emailMessage)
 		
@@ -166,7 +166,7 @@ func GenerateEmailTemplate(puppyName, breed, trackingID, trackingURL string) str
         </tr>
         <tr>
             <td align="center">
-                <a href="https://puppyspotadoption.vercel.app/puppies-for-sale/" style="display: block; background-color: #27ae60; color: #ffffff; font-weight: bold; padding: 10px; text-align: center; text-decoration: none; border-radius: 32px; width: 90%%; margin: 10px auto; cursor: pointer;">See all available pups</a>
+                <a href="https://puppyspotadoption.shop/puppies-for-sale/" style="display: block; background-color: #27ae60; color: #ffffff; font-weight: bold; padding: 10px; text-align: center; text-decoration: none; border-radius: 32px; width: 90%%; margin: 10px auto; cursor: pointer;">See all available pups</a>
             </td>
         </tr>
         <tr>
@@ -184,7 +184,7 @@ func GenerateEmailTemplate(puppyName, breed, trackingID, trackingURL string) str
         <tr>
             <td align="center" style="color: gray; font-size: 14px; padding: 10px;">
                 <p style="font-size: 1.05rem;">Use of the PuppySpotAdoption service and website is subject to our</p>
-                <p style="font-size: 1.05rem;"><a href="https://puppyspotadoption.vercel.app/privacy" style="cursor: pointer;">Privacy Policy</a> and <a href="https://puppyspotadoption.vercel.app/terms-of-use" style="cursor: pointer;">Terms of Service</a></p>
+                <p style="font-size: 1.05rem;"><a href="https://puppyspotadoption.shop/privacy" style="cursor: pointer;">Privacy Policy</a> and <a href="https://puppyspotadoption.shop/terms-of-use" style="cursor: pointer;">Terms of Service</a></p>
                 <p style="font-size: 1.05rem;">PuppySpot &copy; 2025, All rights reserved.</p>
                 <p style="font-size: 1.05rem;">PO Box 239, Nutley, New Jersey, 07110</p>
             </td>
@@ -193,5 +193,3 @@ func GenerateEmailTemplate(puppyName, breed, trackingID, trackingURL string) str
 </body>
 </html>`, puppyName, puppyName, breed, trackingID, trackingURL)
 }
-
-
